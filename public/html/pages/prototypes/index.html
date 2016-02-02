@@ -1,0 +1,23 @@
+<div class="styleguide styleguide-container">
+
+  <div class="styleguide-row">
+    <div class="styleguide-col-full">    
+      <span class="styleguide-header">{{ header.title }}</span>
+      <span class="styleguide-links">
+        {% for link in header.links %}
+        <a href="{{ link.url }}" class="{{ link.active ? 'active' : ''}}">{{ link.title }}</a>
+        {% endfor %}
+      </span>
+      <hr />
+    </div>
+  </div>
+
+  {% for prototype in prototypes %}
+
+  <p>
+    <a href="?page={{ prototype.url }}">{{ prototype.title }}</a>
+  </p>
+
+  {% endfor %}
+
+</div>

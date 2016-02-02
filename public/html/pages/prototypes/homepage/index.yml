@@ -1,0 +1,56 @@
+layout: layout_2
+top: 
+  - component: header
+    data:
+      title: Site title
+      status: Live
+      description: >
+        Find out what's happening today and
+        review any recent notifications from our team.
+
+
+left:
+  - component: menu
+    data:
+      dark: true
+      items:
+        - title: Homepage
+          description: See whats going on today
+          icon: fa-home
+          link:
+            page: homepage
+          active: true
+        - title: Reservations
+          description: Manage reservations
+          icon: fa-calendar
+          link:
+            page: reservations
+        - title: Details
+          description: Edit details
+          icon: fa-pencil
+          link:
+            page: details
+
+center: 
+  - component: feed
+    data:
+      title: "What's happening"
+      items:
+        - title: Departure
+          icon: fa-arrow-circle-right
+          name: Perry Elder
+          details: "1 room, 2 guests"
+        - title: Arrival
+          icon: fa-arrow-circle-left
+          name: Zack Zimmermann
+          details: "1 room, 1 guest"
+
+right:
+  - component: list
+    data:
+      title: Messages
+      items:
+        - title: You have a new message from Jovago Team
+          icon: fa-envelope
+        - title: You have a pending invoice
+          icon: fa-hand-o-right

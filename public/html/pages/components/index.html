@@ -1,0 +1,31 @@
+<div class="styleguide styleguide-container">
+
+  <div class="styleguide-row">
+    <div class="styleguide-col-full">    
+      <span class="styleguide-header">{{ header.title }}</span>
+      <span class="styleguide-links">
+        {% for link in header.links %}
+        <a href="{{ link.url }}" class="{{ link.active ? 'active' : ''}}">{{ link.title }}</a>
+        {% endfor %}
+      </span>
+      <hr />
+    </div>
+  </div>
+
+  {% for guide in guides %}
+
+  <div class="styleguide-row">
+    <div class="styleguide-col-wide">
+      {{ guide.raw }}
+    </div>
+    <div class="styleguide-col-narrow">
+      {% if guide.title %}<div class="styleguide-title">{{ guide.title }}</div>{% endif %}
+      {% if guide.desc %}<div class="styleguide-desc">{{ guide.desc }}</div>{% endif %}
+      {% if not guide.hide_data and guide.data %}<div class="styleguide-source">{{ guide.data }}</div>{% endif %}
+    </div>
+  </div>
+  <hr />
+
+  {% endfor %}
+
+</div>

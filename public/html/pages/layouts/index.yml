@@ -1,0 +1,15 @@
+header:
+  title: Styleguide
+  links:
+    - title: Components
+      url: ?page=components
+    - title: Layouts
+      url: ?page=layouts
+      active: true
+    - title: Prototypes
+      url: ?page=prototypes
+      
+components:
+
+  - ../../components/layout_1
+  - ../../components/layout_2

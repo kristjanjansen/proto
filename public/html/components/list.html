@@ -1,0 +1,23 @@
+<!--
+
+title: List
+component: list
+data:
+  title: Messages
+  items:
+    - title: Item One
+      icon: fa-envelope
+    - title: You have a pending invoice
+      icon: fa-hand-o-right
+
+-->
+
+<h3>{{ title }}</h3>
+<ul class="list-unstyled">
+{% for item in items %}
+  <li>
+  <hr />
+  <span class="icon -{{ item.icon }}"> {{ item.title }}
+  </li>
+{% endfor %}
+</ul>

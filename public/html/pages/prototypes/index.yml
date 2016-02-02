@@ -1,0 +1,20 @@
+header:
+  title: Styleguide
+  links:
+    - title: Components
+      url: ?page=components
+    - title: Layouts
+      url: ?page=layouts
+    - title: Prototypes
+      url: ?page=prototypes
+      active: true
+      
+prototypes:
+
+  - title: Homepage
+    url: prototypes/homepage
+  - title: Reservations
+    url: prototypes/reservations
+  - title: Details
+    url: prototypes/details
+

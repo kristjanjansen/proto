@@ -1,0 +1,90 @@
+$col-ratio: 0.55;
+$total-columns: 12;
+
+.styleguide-container {
+  @extend .container;
+  background: white;
+}
+
+.styleguide-row {
+  @include make-row();
+}
+
+.styleguide-col-full {
+  @include make-md-column($total-columns);
+}
+
+.styleguide-col-wide {
+  @include make-md-column(ceil($total-columns * $col-ratio));
+}
+
+.styleguide-col-narrow {
+  @include make-md-column(floor($total-columns * (1 - $col-ratio)));
+  opacity: 0.5;
+}
+
+.styleguide-header {
+  display: inline-block;
+  font-family: sans-serif;
+  font-size: 28px;
+  font-weight: bold;
+  opacity: 0.5;
+  margin: 30px 0 10px 0;
+}
+
+.styleguide-links {
+  opacity: 0.5;
+  margin-left: 20px;
+  a {
+    padding: 5px 0;
+    margin: 0 10px 0 10px;
+    &.active {
+      border-bottom: 2px solid #aaa;
+    }
+  }
+}
+
+.styleguide-title {
+  font-family: sans-serif;
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.styleguide-desc {
+  font-family: sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.styleguide-source {
+  font-family: monospace;
+  font-size: 13px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: #eee;
+  white-space: pre;
+  overflow: auto;
+}
+.styleguide-icon {
+  width:32%;
+  display: inline-block;
+  > .icon {
+    width: 14px;
+    margin-right: 5px;
+    display: inline-block;
+  }
+  > .title {
+    font-family: monospace;
+    opacity: 0.4;
+    font-size: 13px;
+
+  }
+}
+.styleguide .fixed {
+  display: none;
+}

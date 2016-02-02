@@ -1,0 +1,13 @@
+.feed {
+  width: 100%;
+  tr {
+    border-bottom: 1px solid $gray-lighter;
+    &:last-child {
+      border: none;
+    }
+    td {
+      vertical-align: top;
+      padding: 5px;
+    }
+  }
+}

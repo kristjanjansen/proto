@@ -1,0 +1,112 @@
+layout: layout_2
+top: 
+  - component: header
+    data:
+      title: Details
+
+left:
+  - component: menu
+    data:
+      dark: true
+      items:
+        - title: Homepage
+          description: See whats going on today
+          icon: fa-home
+          link:
+            page: homepage
+        - title: Reservations
+          description: Manage reservations
+          icon: fa-calendar
+          link:
+            page: reservations
+        - title: Details
+          description: Edit details
+          icon: fa-pencil
+          link:
+            page: details
+          active: true
+            
+center: 
+
+  - component: form
+    data:
+      fields:
+
+        - type: header
+          title: Checkin
+          icon: fa-arrow-circle-right
+        - type: select
+          title: From
+          options:
+            - "14:00"
+            - "15:00"
+        - type: select
+          title: To (optional)
+          options:
+            - Please select
+
+        - type: header
+          title: Checkout
+          icon: fa-arrow-circle-left
+        - type: select
+          title: From
+          options:
+            - "14:00"
+            - "15:00"
+        - type: select
+          title: To (optional)
+          options:
+            - Please select 
+
+        - type: header
+          title: Internet
+          icon: fa-wifi
+          description: Internet access is important for many travellers. Free Wifi is a huge selling point.
+        - type: select
+          title: From
+          options:
+            - "14:00"
+            - "15:00"
+        - type: select
+          title: To (optional)
+          options:
+            - Please select  
+
+        - type: header
+          title: Parking
+          icon: fa-automobile
+          description: This information is especially important to those who travelling to your accommodation by car
+        - type: select
+          title: Is parking available for quests?
+          options:
+            - Yes, free
+            - Yes, paid
+            - No
+        - type: select
+          title: " "
+          options:
+            - Private  
+        - type: select
+          title: " "
+          options:
+            - On site  
+        - type: select
+          title: Do the quests need to reserve the parking space?
+          options:
+            - No reservation needed
+            - Reservation needed
+
+        - type: header
+          title: Breakfast
+          icon: fa-coffee
+          description: Indicate if breakfast is included in the price or is it individual add-on
+        - type: checkboxes
+          options:
+            - Breakfast is available for quests.
+
+        - type: button
+          title: Save
+          buttontype: primary
+
+right:
+

@@ -1,0 +1,16 @@
+<!--
+
+title: Icons
+component: icon
+hide_data: true
+data:
+  icons:
+{% for file in files %}
+    - {{ file }}
+{% endfor %}
+
+-->
+
+{{ '{% for icon in icons %}' }}
+<span class="styleguide-icon"><span class="icon -{{ '{{ icon }}' }}"></span><span class="title">{{ '{{ icon }}' }}</span></span>
+{{ '{% endfor %}' }}

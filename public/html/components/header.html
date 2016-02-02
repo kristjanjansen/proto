@@ -1,0 +1,18 @@
+<!--
+
+title: Header
+component: header
+data:
+  title: Site Title
+  status: Live
+  description: Welcome!
+
+-->
+
+<h2>{{ title }} <small><span class="label label-success">{{ status }}</span></small></h2>
+<hr />
+
+{% if description %}
+  {{ description }}
+  <hr />
+{% endif %}

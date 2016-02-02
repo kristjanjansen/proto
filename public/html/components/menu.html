@@ -1,0 +1,36 @@
+<!--
+
+title: Menu
+component: menu
+data:
+  dark: true
+  items:
+    - title: Item One
+      description: Item One Description
+      icon: fa-home
+    - title: Item Two
+      description: Item Two Description
+      icon: fa-calendar
+      links:
+        - First link
+        - Second link
+-->
+
+<div class="menu {{ dark ? '-dark' : '' }}">
+<table>
+{% for item in items %}
+<tr class="{{ item.active ? 'active' : ''}}">
+  <td>
+    <span class="icon -{{ item.icon }} -big">
+  </td>
+  <td>
+    <h4><a href="?page=prototypes/{{ item.link.page }}">{{ item.title }}</a></h4>
+    <p>{{ item.description }}</p>
+    {% for link in item.links %}
+      <a href="">{{ link }}</a><br />
+    {% endfor %}
+  </td>
+</tr>
+{% endfor %}
+</table>
+</div>

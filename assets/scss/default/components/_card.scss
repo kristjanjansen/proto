@@ -1,0 +1,33 @@
+.panel {
+  &.-status-noshow {
+      @extend .panel-warning;
+  }
+  &.-status-cancelled {
+      @extend .panel-danger;
+  }
+  &.-status-ok {
+      @extend .panel-default;
+  }
+  opacity: 0.8;
+  &:hover {
+    opacity: 1;
+  }
+}
+
+
+/*
+.card {
+  @extend .panel;
+  @extend .panel-success;
+  > .heading {
+    @extend .panel-heading;
+    > .title {
+      @extend .panel-title;
+    }
+  }
+  > .body {
+      @extend .panel-body;
+  }
+
+}
+*/

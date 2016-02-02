@@ -1,0 +1,19 @@
+.menu {
+  table {
+    width: 100%;
+    tr {
+      &:hover,
+      &:hover a {
+        background: lighten($blue-midnight, 5%);
+      }
+      td {
+        padding: 5px 0px 5px 15px;
+        vertical-align: top;
+      }
+      &.active,
+      &.active a {
+        background: lighten($blue-midnight, 15%);
+      }
+    }
+  }
+}

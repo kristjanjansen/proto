@@ -1,0 +1,20 @@
+.fixed {
+  @media (max-width: $screen-md-min) {
+    display: none;
+  }
+  position: fixed;
+  width: 25%;
+  height: 100%;
+  min-height: 100%;
+  &, & a {
+    background: $blue-midnight;
+    color: lighten($blue-midnight, 50%);
+  }
+}
+.scrollable {
+  @media (min-width: $screen-md-min) {
+    float: right;
+    width: 71%;
+  }
+  @extend .container-fluid;
+}

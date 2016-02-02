@@ -1,0 +1,58 @@
+<!--
+
+title: Layout with primary header
+desc: >
+  Use for layouts what do not have complex global navigation menu
+  and are more content-based.
+hide_data: true
+data:
+  top: 
+    - component: placeholder
+      data:
+        title: top
+  left: 
+    - component: placeholder
+      data:
+        title: left
+  center: 
+    - component: placeholder
+      data:
+        title: center
+  right: 
+    - component: placeholder
+      data:
+        title: right
+
+-->
+
+<div class="row">
+
+  <div class="col-md-12">
+  {% for item in top %}
+    {% include item.component ~ ".html" with item.data %}
+  {% endfor %}
+  </div>
+
+</div>
+
+<div class="row">
+
+  <div class="col-md-3">
+  {% for item in left %}
+    {% include item.component ~ ".html" with item.data %}
+  {% endfor %}
+  </div>
+
+  <div class="col-md-6">
+  {% for item in center %}
+    {% include item.component ~ ".html" with item.data %}
+  {% endfor %}
+  </div>
+
+  <div class="col-md-3">
+  {% for item in right %}
+    {% include item.component ~ ".html" with item.data %}
+  {% endfor %}
+  </div>
+
+</div>
