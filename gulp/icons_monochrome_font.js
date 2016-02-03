@@ -9,18 +9,17 @@ gulp.task('icons_monochrome_font', function() {
    .pipe(svgscaler({ scale: 10 }))
    .pipe(iconfont({
      fontName: 'icons',
-     appendUnicode: false
    }))
-   .on('glyphs', function(glyphs) {
+   .on('codepoints', function(codepoints) {
      var data = {
-       glyphs: glyphs,
+       glyphs: codepoints,
        fontName: 'icons',
        fontPath: '../fonts',
        className: 'icon',
      };
 
      data.glyphs.map(function(glyph) {
-       glyph.codepoint = glyph.unicode[0].charCodeAt(0).toString(16).toUpperCase()
+       glyph.codepoint = glyph.codepoint.toString(16).toUpperCase()
        return glyph
      })
 
